@@ -28,10 +28,6 @@ public class DefaultBattle implements Battle {
 
     }
 
-    private void chooseStartingPlayer(List<BattlePlayerConfig> battlePlayerConfigs) {
-        this.currentPlayer = battlePlayerConfigs.get(0).getPlayer();
-    }
-
     public Player getCurrentPlayer() {
         return currentPlayer;
     }
@@ -88,6 +84,16 @@ public class DefaultBattle implements Battle {
     }
 
     /**
+     * Chooses first player as starting player. This method can be overriden to implement
+     * custom starting player choosing logic
+     *
+     * @param battlePlayerConfigs
+     */
+    private void chooseStartingPlayer(List<BattlePlayerConfig> battlePlayerConfigs) {
+        this.currentPlayer = battlePlayerConfigs.get(0).getPlayer();
+    }
+
+    /**
      * Picks the next player to play.
      * Current uses round robin to pick next player who has missles.
      *
@@ -104,6 +110,11 @@ public class DefaultBattle implements Battle {
         return this.currentPlayer;
     }
 
+    /**
+     * Computes if the game has reached the end state i.e whether we have a
+     * winner or game is draw.
+     *
+     */
     private void computeWinnerIfNeeded() {
         Set<Player> playersWithNoShips = new HashSet<Player>();
         Set<Player> playersWithNoMissiles = new HashSet<Player>();

@@ -12,7 +12,4 @@ public class QShip extends AbstractShip {
     }
 
 
-    protected int getMaxHits() {
-        return MAX_HITS;
-    }
 }

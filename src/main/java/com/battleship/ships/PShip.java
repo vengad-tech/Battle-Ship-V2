@@ -11,8 +11,4 @@ public class PShip extends AbstractShip {
         super(positionPair, MAX_HITS);
     }
 
-
-    protected int getMaxHits() {
-        return MAX_HITS;
-    }
 }
