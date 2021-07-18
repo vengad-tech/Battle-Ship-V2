@@ -42,6 +42,15 @@ public abstract class AbstractShip implements Ship {
         return false;
     }
 
+    /**
+     * Returns if the ship has been destroyed.
+     *
+     * if at-least one cell of the ship is still remaining then ship is considered not destroyed.
+     *
+     * This method can be overridden to implement custom destruction logic.
+     *
+     * @return
+     */
     public boolean isDestroyed() {
         if (isDestroyed) {
             return true;

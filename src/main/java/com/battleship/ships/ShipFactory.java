@@ -1,4 +1,5 @@
 package com.battleship.ships;
+
 import com.battleship.PositionPair;
 import com.battleship.ships.annotations.RegisterShip;
 import org.apache.commons.lang3.StringUtils;
@@ -10,8 +11,16 @@ import java.lang.reflect.Constructor;
 import java.util.HashMap;
 import java.util.Set;
 
+/**
+ * Automatically discovers all new ship types and create necessary ship when createShip is called.
+ *
+ * For adding new Ship, extend AbstractShip and
+ * add registerShip annotation specifying the type of the ship and it is would be automatically registered.
+ *
+ */
 public class ShipFactory {
     private static HashMap<String, Class<Ship>> shipClasses = new HashMap<>();
+
 
     static {
         System.out.println("Discovering registered ships ..");
@@ -42,7 +51,7 @@ public class ShipFactory {
         }
 
         Constructor<Ship> shipConstructor = shipClasses.get("P").getDeclaredConstructor(PositionPair.class);
-        System.out.println("Creating ship with height ="+shipDimension.getPosX().getInt()+" and width="+shipDimension.getPosY().getInt());
+        System.out.println("Creating ship with height =" + shipDimension.getPosX().getInt() + " and width=" + shipDimension.getPosY().getInt());
         Ship ship = shipConstructor.newInstance(shipDimension);
         return ship;
 

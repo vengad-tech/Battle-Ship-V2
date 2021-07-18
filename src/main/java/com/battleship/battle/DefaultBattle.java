@@ -36,6 +36,16 @@ public class DefaultBattle implements Battle {
         return currentPlayer;
     }
 
+    /**
+     * Current player provided fire the missile at given position.
+     *
+     * Currently opposition is chosen in round robin, but can be extended so that opponent can be passed as argument as
+     * well.
+     *
+     * @param player
+     * @param positionToFire
+     * @return
+     */
     public boolean fireMissile(Player player, PositionPair positionToFire) {
 
         if (player != this.getCurrentPlayer()) {
@@ -77,6 +87,14 @@ public class DefaultBattle implements Battle {
         return false;
     }
 
+    /**
+     * Picks the next player to play.
+     * Current uses round robin to pick next player who has missles.
+     *
+     * If custom player picking logic needs to be added then this method needs to be overriden.
+     *
+     * @return
+     */
     private Player getNextPlayer() {
         for (Player player : this.playerBattleConfigMap.keySet()) {
             if (!player.equals(this.currentPlayer) && player.hasRemainingMissiles()) {

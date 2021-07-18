@@ -12,6 +12,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
+/**
+ * Get's input from stdin (size of battle area, player ship positions and missiles fired etc) and runs
+ * GameOrchestrator and prints the result of game execution.
+ */
 public class Driver {
 
     public static final String INVALID_WIDTH_HEIGHT_ERROR = "Invalid input, need space separated height and width (ex: 5 E)";
@@ -119,7 +123,9 @@ public class Driver {
         List<PositionPair> firingPositionsForPlayer1 = getFiringPositions(reader);
         List<PositionPair> firingPositionsForPlayer2 = getFiringPositions(reader);
 
-
+        /*
+        Playing as 2 players, how-ever the system is scalable to play for any number of users.
+         */
         Player player1 = Player.builder().playerId(PLAYER_1_ID)
                 .totalMissiles(firingPositionsForPlayer1.size()).build();
         Player player2 = Player.builder().playerId(PLAYER_2_ID)
