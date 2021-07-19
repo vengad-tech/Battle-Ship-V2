@@ -1,6 +1,6 @@
 package com.battleship.ships;
 
-import com.battleship.PositionPair;
+import com.battleship.position.PositionPair;
 import com.battleship.ships.annotations.RegisterShip;
 import org.apache.commons.lang3.StringUtils;
 import org.reflections.Reflections;
@@ -50,7 +50,7 @@ public class ShipFactory {
             throw new IllegalArgumentException();
         }
 
-        Constructor<Ship> shipConstructor = shipClasses.get("P").getDeclaredConstructor(PositionPair.class);
+        Constructor<Ship> shipConstructor = shipClasses.get(shipType).getDeclaredConstructor(PositionPair.class);
         System.out.println("Creating ship with height =" + shipDimension.getPosX().getInt() + " and width=" + shipDimension.getPosY().getInt());
         Ship ship = shipConstructor.newInstance(shipDimension);
         return ship;

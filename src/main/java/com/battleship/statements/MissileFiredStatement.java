@@ -1,12 +1,12 @@
-package com.battleship.statement;
+package com.battleship.statements;
 
-import com.battleship.PositionPair;
+import com.battleship.position.PositionPair;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 
 @Builder
 @EqualsAndHashCode
-public class FireMissileStatement implements GameStatement {
+public class MissileFiredStatement implements GameStatement {
     private String playerId;
     private PositionPair target;
     private boolean isHit;

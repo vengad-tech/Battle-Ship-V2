@@ -1,6 +1,6 @@
 package com.battleship.ships;
 
-import com.battleship.PositionPair;
+import com.battleship.position.PositionPair;
 import com.battleship.ships.annotations.RegisterShip;
 
 @RegisterShip(type ="P")

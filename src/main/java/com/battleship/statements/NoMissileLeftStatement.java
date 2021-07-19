@@ -1,11 +1,11 @@
-package com.battleship.statement;
+package com.battleship.statements;
 
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 
 @Builder
 @EqualsAndHashCode
-public class NoMissileLeft implements GameStatement {
+public class NoMissileLeftStatement implements GameStatement {
     private String playerId;
 
     public String toString() {

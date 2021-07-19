@@ -2,9 +2,13 @@ package com.battleship;
 
 import com.battleship.battlearea.BattleArea;
 import com.battleship.battlearea.DefaultBattleArea;
+import com.battleship.player.Player;
+import com.battleship.player.PlayerConfig;
+import com.battleship.position.Position;
+import com.battleship.position.PositionPair;
 import com.battleship.ships.Ship;
 import com.battleship.ships.ShipFactory;
-import com.battleship.statement.GameStatement;
+import com.battleship.statements.GameStatement;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedReader;

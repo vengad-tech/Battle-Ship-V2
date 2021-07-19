@@ -1,7 +1,10 @@
 package com.battleship;
 
 import com.battleship.battlearea.BattleArea;
-import com.battleship.statement.GameStatement;
+import com.battleship.player.Player;
+import com.battleship.player.PlayerConfig;
+import com.battleship.position.PositionPair;
+import com.battleship.statements.GameStatement;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -26,14 +29,18 @@ public class TestCases {
                 "Player-2 fires a missile with target A1  which got hit\n" +
                 "Player-2 fires a missile with target B2  which got miss\n" +
                 "Player-1 fires a missile with target B2  which got hit\n" +
-                "Player-1 fires a missile with target B2  which got miss\n" +
-                "Player-2 fires a missile with target B3  which got miss\n" +
+                "Player-1 fires a missile with target B2  which got hit\n" +
                 "Player-1 fires a missile with target B3  which got miss\n" +
-                "Player-2 fires a missile with target A1  which got miss\n" +
+                "Player-2 fires a missile with target B3  which got miss\n" +
+                "Player-1 has no more missiles left to launch\n" +
+                "Player-2 fires a missile with target A1  which got hit\n" +
                 "Player-2 fires a missile with target D1  which got miss\n" +
+                "Player-1 has no more missiles left to launch\n" +
                 "Player-2 fires a missile with target E1  which got miss\n" +
+                "Player-1 has no more missiles left to launch\n" +
                 "Player-2 fires a missile with target D4  which got hit\n" +
                 "Player-2 fires a missile with target D4  which got miss\n" +
+                "Player-1 has no more missiles left to launch\n" +
                 "Player-2 fires a missile with target D5  which got hit\n" +
                 "Player-2 won the battle\n";
         this.validate(input, output);

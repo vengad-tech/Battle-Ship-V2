@@ -1,5 +1,6 @@
-package com.battleship;
+package com.battleship.position;
 
+import com.battleship.position.Position;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;

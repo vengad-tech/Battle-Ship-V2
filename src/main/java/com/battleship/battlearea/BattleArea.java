@@ -1,6 +1,6 @@
 package com.battleship.battlearea;
 
-import com.battleship.PositionPair;
+import com.battleship.position.PositionPair;
 
 public interface BattleArea {
 

@@ -1,6 +1,6 @@
 package com.battleship.battlearea;
 
-import com.battleship.PositionPair;
+import com.battleship.position.PositionPair;
 import com.battleship.exceptions.ShipLocationAlreadyOccupied;
 import com.battleship.exceptions.ShipLocationOutOfBounds;
 import com.battleship.ships.Ship;
@@ -53,7 +53,7 @@ public class DefaultBattleArea implements BattleArea {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 ShipCell shipCell = this.area[i][j];
-                if (shipCell != null) {
+                if (shipCell != null && !shipCell.isEmpty()) {
                     builder.append('x');
                 } else {
                     builder.append('-');

@@ -1,11 +1,11 @@
-package com.battleship.statement;
+package com.battleship.statements;
 
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 
 @Builder
 @EqualsAndHashCode
-public class GameResultStatement implements GameStatement {
+public class GameCompletedStatement implements GameStatement {
     private boolean isDraw;
     private String winnerPlayerId;
 

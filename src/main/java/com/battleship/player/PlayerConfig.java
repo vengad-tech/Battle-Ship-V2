@@ -1,6 +1,7 @@
-package com.battleship;
+package com.battleship.player;
 
 import com.battleship.battlearea.BattleArea;
+import com.battleship.position.PositionPair;
 import lombok.Builder;
 import lombok.Getter;
 

@@ -1,7 +1,7 @@
 package com.battleship.battle;
 
-import com.battleship.Player;
-import com.battleship.PositionPair;
+import com.battleship.player.Player;
+import com.battleship.position.PositionPair;
 
 import java.util.Optional;
 

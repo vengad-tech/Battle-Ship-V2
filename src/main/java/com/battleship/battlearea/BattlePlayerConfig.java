@@ -1,6 +1,6 @@
 package com.battleship.battlearea;
 
-import com.battleship.Player;
+import com.battleship.player.Player;
 import lombok.Builder;
 import lombok.Getter;
 

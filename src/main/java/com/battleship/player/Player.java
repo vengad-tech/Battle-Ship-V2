@@ -1,4 +1,4 @@
-package com.battleship;
+package com.battleship.player;
 
 import lombok.*;
 
